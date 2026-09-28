@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Pokédex Clássica: os 151 Pokémon originais do anime dos anos 90, com dados em tempo real da PokéAPI.">
+  <title>Pokédex Clássica | Anos 90 e 2000</title>
+
+  <!-- Fontes do Google (apenas tipografia, sem frameworks) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+
+  <link rel="icon" href="img/pokebola.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ===== CABEÇALHO / NAVEGAÇÃO ===== -->
+  <header class="topo">
+    <div class="topo__conteudo">
+      <a href="#inicio" class="logo">
+        <img src="img/pokebola.svg" alt="" class="logo__icone">
+        <span>Pokédex<strong>Clássica</strong></span>
+      </a>
+      <nav class="menu" aria-label="Navegação principal">
+        <a href="#inicio">Início</a>
+        <a href="#historia">História</a>
+        <a href="#pokedex">Pokédex</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="inicio">
+      <div class="hero__texto">
+        <p class="hero__selo">Desde 1997</p>
+        <h1>Temos que pegar!</h1>
+        <p>
+          Reviva o desenho que marcou os anos 90 e 2000. Conheça os
+          <strong>151 Pokémon originais</strong> de Kanto com dados
+          carregados em tempo real da <strong>PokéAPI</strong>.
+        </p>
+        <a href="#pokedex" class="botao botao--primario">Abrir a Pokédex</a>
+      </div>
+      <div class="hero__imagem" aria-hidden="true">
+        <img src="img/pokebola.svg" alt="" class="hero__pokebola">
+      </div>
+    </section>
+
+    <!-- ===== CONTEÚDO SOBRE O DESENHO ===== -->
+    <section class="historia" id="historia">
+      <h2 class="titulo-secao">Um fenômeno dos anos 90 e 2000</h2>
+      <div class="historia__grade">
+        <article class="info">
+          <span class="info__numero">1997</span>
+          <h3>A estreia no Japão</h3>
+          <p>O anime estreou na TV Tokyo em abril de 1997, baseado nos jogos
+            Pokémon Red e Green, lançados para o Game Boy em 1996.</p>
+        </article>
+        <article class="info">
+          <span class="info__numero">1999</span>
+          <h3>Chegada ao Brasil</h3>
+          <p>O desenho estreou no Brasil em 1999 e virou febre: figurinhas,
+            tazos, cartas e a famosa abertura “Temos que pegar!”.</p>
+        </article>
+        <article class="info">
+          <span class="info__numero">151</span>
+          <h3>A primeira geração</h3>
+          <p>Ash Ketchum e Pikachu partiram de Pallet Town para conhecer os
+            151 Pokémon da região de Kanto, os mesmos que você vê abaixo.</p>
+        </article>
+        <article class="info">
+          <span class="info__numero">+1.200</span>
+          <h3>Um sucesso duradouro</h3>
+          <p>A série passou de 1.200 episódios e mais de 20 filmes, e se tornou
+            a franquia de mídia mais lucrativa da história.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== ÁREA DOS CARDS (preenchida pelo JavaScript) ===== -->
+    <section class="pokedex" id="pokedex">
+      <h2 class="titulo-secao">Pokédex de Kanto</h2>
+      <p class="pokedex__subtitulo">Dados em tempo real da
+        <a href="https://pokeapi.co/" target="_blank" rel="noopener">PokéAPI</a>.
+        Clique no coração para favoritar.</p>
+
+      <!-- Controles de busca e filtro -->
+      <div class="controles">
+        <input type="search" id="busca" class="controles__busca"
+               placeholder="Buscar por nome ou número..." aria-label="Buscar Pokémon">
+        <select id="filtro-tipo" class="controles__select" aria-label="Filtrar por tipo">
+          <option value="">Todos os tipos</option>
+        </select>
+        <button type="button" id="botao-favoritos" class="botao botao--favoritos" aria-pressed="false">
+          ♡ Só favoritos
+        </button>
+      </div>
+
+      <p id="status" class="status" role="status" aria-live="polite"></p>
+
+      <!-- O HTML só tem o container vazio: os cards são criados pelo JavaScript -->
+      <div id="lista-cards" class="lista-cards"></div>
+
+      <div class="carregar-mais">
+        <button type="button" id="botao-carregar" class="botao botao--primario" hidden>
+          Carregar mais Pokémon
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <p>Projeto acadêmico de Web Development Front-End, feito com HTML, CSS e JavaScript puros.</p>
+    <p>Dados: <a href="https://pokeapi.co/" target="_blank" rel="noopener">PokéAPI</a>.
+      Pokémon e seus personagens são marcas de Nintendo, Game Freak e Creatures.</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
