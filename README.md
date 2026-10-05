@@ -5,6 +5,7 @@ Aplicação front-end que consome a [PokéAPI](https://pokeapi.co/) e exibe os *
 Projeto acadêmico da disciplina **Web Development Front-End**, de André Felipe Dias (RA 146623), Ciência da Computação, 4º semestre.
 
 **Site publicado:** https://andredias123.github.io/pokedex-anos-90/
+**Video publicado:** https://youtu.be/ICZKURszbu8
 
 ## Tecnologias
 
